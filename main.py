@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 from telethon import TelegramClient, events
 
@@ -10,7 +11,7 @@ client = TelegramClient('session_bot', API_ID, API_HASH).start(bot_token=BOT_TOK
 
 @client.on(events.NewMessage(pattern=r'\.help'))
 async def help_cmd(event):
-    await event.reply("Bot is online 24/7\nCommands:\n.help - show commands")
+    await event.reply("Bot is online 24/7")
 
 @client.on(events.NewMessage(pattern=r'\.start'))
 async def start_cmd(event):
