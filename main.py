@@ -5,16 +5,16 @@ API_ID = int(os.getenv('API_ID'))
 API_HASH = os.getenv('API_HASH')
 BOT_TOKEN = os.getenv('BOT_TOKEN')
 
-print("噩丕乇賷 鬲卮睾賷賱 丕賱亘賵鬲...")
+print("جاري تشغيل البوت...")
 client = TelegramClient('session_bot', API_ID, API_HASH).start(bot_token=BOT_TOKEN)
 
 @client.on(events.NewMessage(pattern=r'\.help'))
 async def help_cmd(event):
-    await event.reply("鉁� 丕賱亘賵鬲 卮睾丕賱 24 爻丕毓丞 亘丿賵賳 賰賵丿\n丕賱丕賵丕賲乇:\n.help - 賱毓乇囟 丕賱丕賵丕賲乇")
+    await event.reply("✅ البوت شغال 24 ساعة بدون كود\nالاوامر:\n.help - لعرض الاوامر")
 
 @client.on(events.NewMessage(pattern=r'\.start'))
 async def start_cmd(event):
-    await event.reply("丕賴賱丕! 丕賳丕 丕賱亘賵鬲 亘鬲丕毓賰 卮睾丕賱")
+    await event.reply("اهلا! انا البوت بتاعك شغال")
 
-print("鉁� 丕賱亘賵鬲 卮睾丕賱 賵賲鬲氐賱")
+print("✅ البوت شغال ومتصل")
 client.run_until_disconnected()
